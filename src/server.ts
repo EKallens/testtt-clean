@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-//import { setupRoutes } from './infrastructure/ExpressRoutes';
+import { setupRoutes } from './infrastructure/ExpressRoutes';
 
 const app = express();
 const PORT = 3000;
@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-//setupRoutes(app);
+setupRoutes(app);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
